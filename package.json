@@ -15,7 +15,7 @@
   },
   "bin": {
     "rebuild-for-node-version": "index.js"
-  }
+  },
   "author": {
     "name": "Daniel Poindexter",
     "email": "dpoindexter@uship.com"
