@@ -1,0 +1,22 @@
+{
+  "name": "rebuild-for-node-version",
+  "version": "1.0.0",
+  "description": "A post-install utility the rebuilds local package dependencies when upgrading Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uship/rebuild-for-node-version.git"
+  },
+  "bin": {
+    "rebuild-for-node-version": "index.js"
+  }
+  "author": "Daniel Poindexter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uship/rebuild-for-node-version/issues"
+  },
+  "homepage": "https://github.com/uship/rebuild-for-node-version#readme"
+}
