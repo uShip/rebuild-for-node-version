@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/uship/rebuild-for-node-version/issues"
   },
-  "homepage": "https://github.com/uship/rebuild-for-node-version#readme"
+  "homepage": "https://github.com/uship/rebuild-for-node-version#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
 }

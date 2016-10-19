@@ -2,9 +2,10 @@
 var fs = require('fs');
 var exec = require('child_process').exec;
 var path = require('path');
+var mkdirp = require('mkdirp');
 
 var pathArg = process.argv[2] || './.build/.node-version';
-var versionFilePath = path.resolve(process.cwd(), process.argv[2]);
+var versionFilePath = path.resolve(process.cwd(), pathArg);
 
 fs.readFile(versionFilePath, { encoding: 'utf8' }, function (err, contents) {
     if (err && err.code !== 'ENOENT') throw err;
@@ -28,6 +29,7 @@ fs.readFile(versionFilePath, { encoding: 'utf8' }, function (err, contents) {
 
         rebuild.on('close', function (code) {
             if (code) console.log('child process exited with code ', code);
+            mkdirp.sync(path.dirname(versionFilePath));
             fs.writeFile(versionFilePath, process.version, function (err) {
                 if (err) throw err;
                 console.log('wrote version check file: ', process.version);
