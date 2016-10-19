@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 var path = require('path');
 var mkdirp = require('mkdirp');
 
-var pathArg = process.argv[2] || './.build/.node-version';
+var pathArg = process.argv[2] || './.tmp/.node-version';
 var versionFilePath = path.resolve(process.cwd(), pathArg);
 
 fs.readFile(versionFilePath, { encoding: 'utf8' }, function (err, contents) {
