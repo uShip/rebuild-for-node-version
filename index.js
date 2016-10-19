@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 var fs = require('fs');
 var exec = require('child_process').exec;
+var path = require('path');
 
-var versionFilePath = './node_modules/.node-version';
+var pathArg = process.argv[2] || './.build/.node-version';
+var versionFilePath = path.resolve(process.cwd(), process.argv[2]);
 
 fs.readFile(versionFilePath, { encoding: 'utf8' }, function (err, contents) {
     if (err && err.code !== 'ENOENT') throw err;
